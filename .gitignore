@@ -1,3 +1,109 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+.phpunit.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.nova
+/.vscode
+
+# Wave ignores.
+/public/.well-known
+/public/demo
+/.vagrant
+/wave-pro
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.DS_Store
+/wave/vendor/
+/public/wave/docs
+/storage/app/analytics
+/packages
+storage/app/livewire-tmp
+resources/themes/.gitignore
+/resources/plugins/*
+!/resources/plugins/installed.json
+/storage/app/public/livewire-tmp
+/storage/app/public/*
+!/storage/app/public/demo
+
+# Ignore everything inside the resources/plugins folder
+resources/plugins/*
+
+# But do not ignore the resources/plugins folder itself
+!resources/plugins/
+!resources/plugins/installed.json
+
+
+# Laravel
+/vendor/
+/node_modules/
+/public/storage
+/public/hot
+/storage/*.key
+/storage/app/public
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+/storage/logs
+/.idea
+/.vscode
+.env
+.env.*
+.phpunit.result.cache
+Homestead.yaml
+Homestead.json
+npm-debug.log
+yarn-error.log
+pids
+*.pid
+*.seed
+*.log
+*.sqlite
+*.DS_Store
+
+# Composer
+composer.lock
+
+# Laravel Mix / Vite
+/public/build
+/public/mix-manifest.json
+/public/vite.svg
+
+# Cache
+.php_cs.cache
+.php-cs-fixer.cache
+
+# Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Wave-specific extras
+/public/uploads
+/public/profile
+storage/oauth-private.key
+storage/oauth-public.key
+
+# Supabase (local configs)
+/supabase
 /vendor/
 node_modules/
 npm-debug.log
