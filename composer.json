@@ -78,11 +78,7 @@
             "@php artisan db:seed"
         ],
         "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover",
-            "@php artisan storage:link",
-            "@php artisan filament:upgrade",
-            "@php artisan livewire:publish --assets"
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
