@@ -1,0 +1,24 @@
+[phases.setup]
+aptPkgs = ["libzip-dev", "zip", "unzip"]
+
+[phases.install]
+cmds = [
+  # Create cache directories FIRST
+  "mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions storage/logs bootstrap/cache",
+  "chmod -R 777 storage bootstrap/cache",
+  # Install PHP extensions
+  "install-php-extensions zip",
+  # Run composer WITHOUT post-autoload-dump scripts
+  "composer install --optimize-autoloader --no-scripts --no-interaction"
+]
+
+[phases.build]
+cmds = [
+  "npm ci --omit=dev",
+  "npm run build",
+  # Now run package:discover with cache directories ready
+  "php artisan package:discover --ansi"
+]
+
+[start]
+cmd = "php artisan config:clear && php artisan cache:clear && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT}"
