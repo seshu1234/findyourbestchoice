@@ -77,12 +77,6 @@
             "@php artisan migrate --graceful --ansi",
             "@php artisan db:seed"
         ],
-        "pre-autoload-dump": [
-            "mkdir -p storage/framework/views",
-            "mkdir -p storage/framework/cache",
-            "mkdir -p storage/framework/sessions",
-            "mkdir -p storage/logs"
-        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
