@@ -1,0 +1,11 @@
+# Create storage directories
+mkdir -p storage/framework/views
+mkdir -p storage/framework/cache
+mkdir -p storage/framework/sessions
+mkdir -p storage/logs
+
+# Create .gitkeep files
+echo "# Directory required for Laravel on Railway" > storage/framework/views/.gitkeep
+echo "# Directory required for Laravel on Railway" > storage/framework/cache/.gitkeep
+echo "# Directory required for Laravel on Railway" > storage/framework/sessions/.gitkeep
+echo "# Directory required for Laravel on Railway" > storage/logs/.gitkeep
