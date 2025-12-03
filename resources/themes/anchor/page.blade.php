@@ -31,6 +31,10 @@
         <div class="max-w-4xl mx-auto">
             {!! $page['body'] !!}
         </div>
+        <div class="p-6 bg-red-500 text-white rounded-lg mt-6">
+    Tailwind is working!
+</div>
+
 
     </article>
 

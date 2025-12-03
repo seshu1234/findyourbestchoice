@@ -24,7 +24,9 @@ export default {
         './node_modules/flowbite/**/*.js',
 
     ],
-
+     plugins: [
+        require('flowbite/plugin')
+    ],
     theme: {
         extend: {
             animation: {
