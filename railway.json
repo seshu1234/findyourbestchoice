@@ -4,6 +4,6 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "php -S 0.0.0.0:${PORT} -t public"
+    "startCommand": "php -d display_errors=1 -d error_reporting=E_ALL artisan serve --host=0.0.0.0 --port=${PORT} 2>&1"
   }
 }
