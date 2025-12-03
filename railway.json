@@ -2,12 +2,9 @@
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "mkdir -p storage/framework/{views,cache,sessions} storage/logs bootstrap/cache && chmod -R 777 storage bootstrap/cache && install-php-extensions zip && composer install --optimize-autoloader --no-scripts --no-interaction --no-dev && npm ci --omit=dev && npm run build && php artisan package:discover --ansi && php artisan storage:link && php artisan filament:upgrade && php artisan livewire:publish --assets"
+    "buildCommand": "mkdir -p storage/framework/{views,cache,sessions} storage/logs bootstrap/cache && chmod -R 777 storage bootstrap/cache && install-php-extensions zip && composer install --optimize-autoloader --no-scripts --no-interaction"
   },
   "deploy": {
-    "numReplicas": 1,
-    "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10,
-    "startCommand": "php artisan config:clear && php artisan cache:clear && php artisan view:clear && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT}"
+    "startCommand": "php artisan package:discover --ansi && php artisan config:clear && php artisan cache:clear && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT}"
   }
 }
